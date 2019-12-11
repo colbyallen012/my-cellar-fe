@@ -4,3 +4,17 @@ export const fetchWines = () => {
     .then(res => res)
     .catch(error => error.message)
 }
+
+export const postWine = (wine) => {
+  const options = {
+    method: 'POST',
+    body: JSON.stringify(wine),
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  }
+  return fetch('https://the-vino-cellar.herokuapp.com/api/v1/vinos', options)
+    .then(res => res.json())
+    .then(data => data)
+    .catch(error => error.message)
+}

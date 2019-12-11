@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import './WineForm.css'
+import { postWine } from './ApiCalls';
+import './WineForm.css';
 
 export class WineForm extends Component {
   constructor(props) {
@@ -20,9 +21,9 @@ export class WineForm extends Component {
     console.log(this.state)
   }
 
-  handleSubmit = (e) => {
+  handleSubmit = async (e) => {
     e.preventDefault()
-    console.log(this.state)
+    await postWine(this.state)
   }
 
   render() {
