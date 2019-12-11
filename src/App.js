@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import { fetchWines } from './ApiCalls'
+import WineForm from './WineForm.js'
 import './App.css';
 
 export class App extends Component {
@@ -24,6 +25,7 @@ export class App extends Component {
     return (
       <div className='App'>
         <h1>Vino Cellar</h1>
+        <WineForm />
       </div>
     )
   }
