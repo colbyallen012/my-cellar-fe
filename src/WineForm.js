@@ -9,8 +9,8 @@ export class WineForm extends Component {
       name: '',
       color: '',
       type: '',
-      year: 0,
-      rating: 0,
+      year: '',
+      rating: '',
     }
   }
 
@@ -45,9 +45,30 @@ export class WineForm extends Component {
           />
           <input
             type='text'
+            value={this.state.color}
+            name='color'
+            placeholder='Color'
+            onChange={this.handleChange}
+          />
+          <input
+            type='text'
             value={this.state.type}
             name='type'
             placeholder='Type'
+            onChange={this.handleChange}
+          />
+          <input
+            type='number'
+            value={this.state.year}
+            name='year'
+            placeholder='Year'
+            onChange={this.handleChange}
+          />
+          <input
+            type='rating'
+            value={this.state.rating}
+            name='rating'
+            placeholder='Rating'
             onChange={this.handleChange}
           />
           <button>Add Wine</button>
