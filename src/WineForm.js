@@ -23,6 +23,7 @@ export class WineForm extends Component {
   handleSubmit = async (e) => {
     e.preventDefault()
     await postWine(this.state)
+    this.props.getWines()
     this.setState({vineyard: '', name: '', color: '', type: '', year: '', rating: ''})
   }
 
