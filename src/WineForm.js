@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import './WineForm.css'
+import { postWine } from './ApiCalls';
+import './WineForm.css';
 
 export class WineForm extends Component {
   constructor(props) {
@@ -9,20 +10,21 @@ export class WineForm extends Component {
       name: '',
       color: '',
       type: '',
-      year: 0,
-      rating: 0,
+      year: '',
+      rating: '',
     }
   }
 
   handleChange = (e) => {
     const {name, value} = e.target;
     this.setState({ [name]: value})
-    console.log(this.state)
   }
 
-  handleSubmit = (e) => {
+  handleSubmit = async (e) => {
     e.preventDefault()
-    console.log(this.state)
+    await postWine(this.state)
+    this.props.getWines()
+    this.setState({vineyard: '', name: '', color: '', type: '', year: '', rating: ''})
   }
 
   render() {
@@ -34,6 +36,41 @@ export class WineForm extends Component {
             value={this.state.vineyard}
             name='vineyard'
             placeholder='Vineyard'
+            onChange={this.handleChange}
+          />
+          <input
+            type='text'
+            value={this.state.name}
+            name='name'
+            placeholder='Name'
+            onChange={this.handleChange}
+          />
+          <input
+            type='text'
+            value={this.state.color}
+            name='color'
+            placeholder='Color'
+            onChange={this.handleChange}
+          />
+          <input
+            type='text'
+            value={this.state.type}
+            name='type'
+            placeholder='Type'
+            onChange={this.handleChange}
+          />
+          <input
+            type='number'
+            value={this.state.year}
+            name='year'
+            placeholder='Year'
+            onChange={this.handleChange}
+          />
+          <input
+            type='rating'
+            value={this.state.rating}
+            name='rating'
+            placeholder='Rating'
             onChange={this.handleChange}
           />
           <button>Add Wine</button>
