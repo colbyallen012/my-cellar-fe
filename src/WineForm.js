@@ -18,12 +18,12 @@ export class WineForm extends Component {
   handleChange = (e) => {
     const {name, value} = e.target;
     this.setState({ [name]: value})
-    console.log(this.state)
   }
 
   handleSubmit = async (e) => {
     e.preventDefault()
     await postWine(this.state)
+    this.setState({vineyard: '', name: '', color: '', type: '', year: '', rating: ''})
   }
 
   render() {
