@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { fetchWines } from './ApiCalls'
 import './App.css';
 
 export class App extends Component {
@@ -7,6 +8,16 @@ export class App extends Component {
     this.state = {
       wines: []
     }
+  }
+
+  componentDidMount () {
+    this.getWines()
+  }
+
+  getWines = async () => {
+    await fetchWines()
+      .then(wines => this.setState({wines: wines}))
+      .catch(error => error.message)
   }
 
   render () {
