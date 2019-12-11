@@ -2,15 +2,17 @@ import React from 'react';
 import Vino from './Vino'
 import './Wines.css'
 
-const Wines = ({wines}) => {
+const Wines = ({wines, removeVino}) => {
   const wineCards = wines.map(wine => {
-    return <Vino 
+    return <Vino
+      id={wine.id} 
       vineyard={wine.vineyard}
       name={wine.name}
       color={wine.color}
       type={wine.type}
       year={wine.year}
       rating={wine.rating}
+      removeVino={removeVino}
     />
   })
 

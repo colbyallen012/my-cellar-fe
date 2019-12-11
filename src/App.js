@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { fetchWines } from './ApiCalls'
+import { fetchWines, deleteWine} from './ApiCalls'
 import WineForm from './WineForm.js'
 import Wines from './Wines.js'
 import './App.css';
@@ -22,12 +22,17 @@ export class App extends Component {
       .catch(error => error.message)
   }
 
+  removeVino = async (id) => {
+    await deleteWine(id)
+    this.getWines()
+  }
+
   render () {
     return (
       <div className='App'>
         <h1>Vino Cellar</h1>
         <WineForm  getWines={this.getWines}/>
-        <Wines wines={this.state.wines} />
+        <Wines wines={this.state.wines} removeVino={this.removeVino}/>
       </div>
     )
   }
