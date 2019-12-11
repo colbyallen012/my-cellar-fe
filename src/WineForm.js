@@ -43,6 +43,13 @@ export class WineForm extends Component {
             placeholder='Name'
             onChange={this.handleChange}
           />
+          <input
+            type='text'
+            value={this.state.type}
+            name='type'
+            placeholder='Type'
+            onChange={this.handleChange}
+          />
           <button>Add Wine</button>
         </form>
       </div>
