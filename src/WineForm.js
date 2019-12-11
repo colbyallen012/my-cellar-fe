@@ -14,10 +14,30 @@ export class WineForm extends Component {
     }
   }
 
+  handleChange = (e) => {
+    const {name, value} = e.target;
+    this.setState({ [name]: value})
+    console.log(this.state)
+  }
+
+  handleSubmit = (e) => {
+    e.preventDefault()
+    console.log(this.state)
+  }
+
   render() {
     return(
       <div className='WineForm'>
-        <p>Dis is da wine form cussin</p>
+        <form className='wine-input' onSubmit={this.handleSubmit}>
+          <input
+            type='text'
+            value={this.state.vineyard}
+            name='vineyard'
+            placeholder='Vineyard'
+            onChange={this.handleChange}
+          />
+          <button>Add Wine</button>
+        </form>
       </div>
     )
   }
