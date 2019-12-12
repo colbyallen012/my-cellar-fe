@@ -1,8 +1,25 @@
 .wine-input{
-  background-color: white;
-  width: 50%;
+  /* background-color: white; */
+  margin: auto;
+  text-align: center;
+  width: 60%;
 }
 
 input {
-  width: 98%;
+  /* border: 2px solid; */
+  /* border-radius: 15px; */
+  height: 20px;
+  padding: 5px;
+  margin: 10px;
+  text-align: center;
+  width: 150px;
+}
+
+.add {
+  border-radius: 25px;
+  height: 30px;
+  padding: 5px;
+  margin: 20px;
+  text-align: center;
+  width: 200px;
 }
