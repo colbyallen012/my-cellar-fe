@@ -1,3 +1,13 @@
-.vino {
+@import url('https://fonts.googleapis.com/css?family=Cinzel:700&display=swap');
 
+.vino {
+  background-color:rgba(255,255,255, 0.3);
+  margin: auto;
+}
+
+.vineyard {
+  color: white;
+  font-family: 'cinzel', serif;
+  font-size: 25px;
+  text-align: center;
 }

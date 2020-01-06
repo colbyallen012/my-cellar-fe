@@ -18,6 +18,7 @@ const Wines = ({wines, removeVino}) => {
 
   return (
     <div className='wines'>
+      <h2 className='wine'>Your Cellar</h2>
       <section className='wine-container'>
         {wineCards}
       </section>
