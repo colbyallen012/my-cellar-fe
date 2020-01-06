@@ -27,4 +27,9 @@ describe('ApiCalls', () => {
     fetchWines();
     expect(window.fetch).toHaveBeenCalledWith(expected)
   })
+
+  it('should return a parsed response', async () => {
+    const result = await fetchWines();
+    expect(result).toEqual(mockWine)
+  })
 })
