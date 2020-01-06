@@ -32,4 +32,11 @@ describe('ApiCalls', () => {
     const result = await fetchWines();
     expect(result).toEqual(mockWine)
   })
+
+  it('should return an error message', async () => {
+    window.fetch = jest.fn().mockImplementation(() => {
+      return Promise.reject('Error Fetching Wine')
+    });
+    await expect(window.fetch()).rejects.toEqual('Error Fetching Wine');
+  })
 })
