@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Cinzel:700&display=swap');
+
+
 .App {
   background-color: #282c34;
   background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3) ), url("./Utils/background.jpeg");
@@ -6,15 +9,21 @@
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* align-items: center; */
-  /* justify-content: center; */
-  /* font-size: calc(10px + 2vmin); */
-  /* color: white; */
   z-index:3;
 }
 
 h1{
+  color: white;
+  font-family: 'cinzel', serif;
+  font-size: 65px;
   margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+section {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: 10px;
 }

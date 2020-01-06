@@ -42,7 +42,7 @@ export class WineForm extends Component {
             type='text'
             value={this.state.name}
             name='name'
-            placeholder='Name'
+            placeholder='Bottle Name'
             onChange={this.handleChange}
           />
           <input
@@ -67,13 +67,13 @@ export class WineForm extends Component {
             onChange={this.handleChange}
           />
           <input
-            type='rating'
+            type='number'
             value={this.state.rating}
             name='rating'
             placeholder='Rating'
             onChange={this.handleChange}
           />
-          <button>Add Wine</button>
+          <button className='add'>Add Wine</button>
         </form>
       </div>
     )

@@ -1,8 +1,56 @@
 .wine-input{
-  background-color: white;
+  margin: auto;
+  text-align: center;
   width: 50%;
 }
 
 input {
-  width: 98%;
+  border: none;
+  border-radius: 15px;
+  height: 25px;
+  padding: 5px;
+  margin: 10px;
+  text-align: center;
+  width: 170px;
+}
+
+input[type="text"], input[type='number'] {
+    font-size: 18px;
+}
+
+.add {
+  background-color: #D3E303;
+  border-radius: 25px;
+  font-size: 15px;
+  font-weight: bold;
+  height: 35px;
+  padding: 8px;
+  margin: 20px;
+  text-align: center;
+  width: 200px;
+}
+
+.add:hover {
+  cursor: pointer;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: grey;
+  font-weight: bold;
+  font-size: 15px;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: grey;
+  font-weight: bold;
+  font-size: 15px;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: grey;
+  font-weight: bold;
+  font-size: 15px;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: grey;
+  font-weight: bold;
+  font-size: 15px;
 }
