@@ -31,8 +31,10 @@ export class App extends Component {
     return (
       <div className='App'>
         <h1>Vino Cellar</h1>
-        <WineForm  getWines={this.getWines}/>
-        <Wines wines={this.state.wines} removeVino={this.removeVino}/>
+        <section>
+          <WineForm getWines={this.getWines}/>
+          <Wines wines={this.state.wines} removeVino={this.removeVino}/>
+        </section>
       </div>
     )
   }

@@ -20,3 +20,10 @@ h1{
   padding: 20px;
   text-align: center;
 }
+
+section {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: 10px;
+}

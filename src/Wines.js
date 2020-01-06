@@ -18,7 +18,6 @@ const Wines = ({wines, removeVino}) => {
 
   return (
     <div className='wines'>
-      <h2>Wine Container</h2>
       <section className='wine-container'>
         {wineCards}
       </section>
