@@ -1,5 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Cinzel:700&display=swap');
+
+.wine {
+  color: white;
+  font-family: 'cinzel', serif;
+  font-size: 45px;
+  text-align: center;
+}
+
 .wines {
-  margin: auto;
   text-align: center;
   width: 50%;
+}
+
+.wine-container {
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+  height: 500px;
 }

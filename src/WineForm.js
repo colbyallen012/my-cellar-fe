@@ -30,6 +30,7 @@ export class WineForm extends Component {
   render() {
     return(
       <div className='WineForm'>
+        <h2 className='add-wine'>Add Wine</h2>
         <form className='wine-input' onSubmit={this.handleSubmit}>
           <input
             type='text'
@@ -73,7 +74,7 @@ export class WineForm extends Component {
             placeholder='Rating'
             onChange={this.handleChange}
           />
-          <button className='add'>Add Wine</button>
+          <button className='add'>Submit</button>
         </form>
       </div>
     )
