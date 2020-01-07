@@ -100,4 +100,27 @@ describe('ApiCalls', () => {
       await expect(window.fetch()).rejects.toEqual('Error posting wine')
     })
   })
+
+  describe('Delete Wine', () => {
+    let mockWine;
+
+    beforeEach(() => {
+      mockWine = {
+        id: 8,
+        vineyard: 'Fake Vineyard',
+        name: 'Fake Name',
+        color: 'Red',
+        type: 'fake',
+        year: 2020,
+        rating: 1 
+      }
+      window.fetch = jest.fn().mockImplementation(() => {
+        return Promise.resolve({
+          ok: true,
+        })
+      })
+    })
+
+    
+  })
 })
