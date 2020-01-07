@@ -121,6 +121,16 @@ describe('ApiCalls', () => {
       })
     })
 
-    
+    it('should delete wine from api when passed correct url', () => {
+      const url = `https://the-vino-cellar.herokuapp.com/api/v1/vinos/${mockWine}`
+      const option = {
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      }
+      deleteWine(mockWine);
+      expect(window.fetch).toHaveBeenCalledWith(url, option)
+    })
   })
 })
