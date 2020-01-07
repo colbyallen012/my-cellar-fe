@@ -92,5 +92,12 @@ describe('ApiCalls', () => {
     it('should return a wine if the response is ok', async () => {
       await expect(postWine(mockWine)).resolves.toEqual(mockResponse.data)
     })
+
+    it('should return and error response message', async () => {
+      window.fetch = jest.fn().mockImplementation(() => {
+        return Promise.reject('Error posting wine')
+      })
+      await expect(window.fetch()).rejects.toEqual('Error posting wine')
+    })
   })
 })
