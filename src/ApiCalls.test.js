@@ -75,6 +75,7 @@ describe('ApiCalls', () => {
         })
       })
     })
+
     it('should post a new wine with the correct URL', () => {
       const url = 'https://the-vino-cellar.herokuapp.com/api/v1/vinos'
       const options = {
@@ -86,6 +87,10 @@ describe('ApiCalls', () => {
       }
       postWine(mockWine)
       expect(window.fetch).toHaveBeenCalledWith(url, options)
+    })
+
+    it('should return a wine if the response is ok', async () => {
+      await expect(postWine(mockWine)).resolves.toEqual(mockResponse.data)
     })
   })
 })
