@@ -132,5 +132,12 @@ describe('ApiCalls', () => {
       deleteWine(mockWine);
       expect(window.fetch).toHaveBeenCalledWith(url, option)
     })
+
+    it('should return an error response', async () => {
+      window.fetch = jest.fn().mockImplementation(() => {
+        return Promise.reject('Error deleting wine')
+      })
+      await expect(window.fetch()).rejects.toEqual('Error deleting wine')
+    })
   })
 })
