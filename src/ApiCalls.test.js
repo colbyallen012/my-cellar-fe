@@ -3,7 +3,7 @@ import {fetchWines, postWine, deleteWine} from './ApiCalls'
 
 describe('ApiCalls', () => {
 
-  describ('Get Wine', () => {
+  describe('Get Wine', () => {
     let mockWine;
 
     beforeEach(() => {
@@ -40,6 +40,52 @@ describe('ApiCalls', () => {
         return Promise.reject('Error Fetching Wine')
       });
       await expect(window.fetch()).rejects.toEqual('Error Fetching Wine');
+    })
+  })
+
+  describe('Post wine', () => {
+    let mockWine;
+    let mockResponse;
+
+    beforeEach(() => {
+      mockResponse = {
+        data: {
+          id: 7,
+          vineyard: 'Fake Vineyard',
+          name: 'Fake Name',
+          color: 'Red',
+          type: 'fake',
+          year: 2020,
+          rating: 1 
+        }
+      }
+      mockWine = mockWine = {
+        id: 7,
+        vineyard: 'Fake Vineyard',
+        name: 'Fake Name',
+        color: 'Red',
+        type: 'fake',
+        year: 2020,
+        rating: 1 
+      }
+      window.fetch = jest.fn().mockImplementation(() => {
+        return Promise.resolve({
+          ok: true,
+          json: () => Promise.resolve(mockWine)
+        })
+      })
+    })
+    it('should post a new wine with the correct URL', () => {
+      const url = 'https://the-vino-cellar.herokuapp.com/api/v1/vinos'
+      const options = {
+        method: 'POST',
+        body: JSON.stringify(mockWine),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      }
+      postWine(mockWine)
+      expect(window.fetch).toHaveBeenCalledWith(url, options)
     })
   })
 })
