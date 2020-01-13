@@ -11,7 +11,9 @@ Enzyme and Jest Testing
 ## Goals
 
 For this project I wanted to work on my backend skills (postgreSQL, Express.js).
+
 Keep my react skills sharp.
+
 Continued practice on connecting front end and back end projects.
 
 ## Screenshots
