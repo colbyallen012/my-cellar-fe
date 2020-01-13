@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WineForm should match snapshot 1`] = `
+<div
+  className="WineForm"
+>
+  <h2
+    className="add-wine"
+  >
+    Add Wine
+  </h2>
+  <form
+    className="wine-input"
+    onSubmit={[Function]}
+  >
+    <input
+      name="vineyard"
+      onChange={[Function]}
+      placeholder="Vineyard"
+      type="text"
+      value=""
+    />
+    <input
+      name="name"
+      onChange={[Function]}
+      placeholder="Bottle Name"
+      type="text"
+      value=""
+    />
+    <input
+      name="color"
+      onChange={[Function]}
+      placeholder="Color"
+      type="text"
+      value=""
+    />
+    <input
+      name="type"
+      onChange={[Function]}
+      placeholder="Type"
+      type="text"
+      value=""
+    />
+    <input
+      name="year"
+      onChange={[Function]}
+      placeholder="Year"
+      type="number"
+      value=""
+    />
+    <input
+      name="rating"
+      onChange={[Function]}
+      placeholder="Rating"
+      type="number"
+      value=""
+    />
+    <button
+      className="add"
+    >
+      Submit
+    </button>
+  </form>
+</div>
+`;

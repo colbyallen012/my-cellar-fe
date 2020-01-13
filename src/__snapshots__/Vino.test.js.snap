@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Vino should match snapshot 1`] = `
+<div
+  className="vino"
+>
+  <h3
+    className="vineyard"
+  />
+  <h4
+    className="name"
+  />
+  <p
+    className="color"
+  />
+  <p
+    className="type"
+  />
+  <p
+    className="year"
+  >
+    Year: 
+  </p>
+  <p
+    className="rating"
+  >
+    Rating: 
+  </p>
+  <button
+    className="delete"
+    onClick={[Function]}
+  >
+    Delete Wine
+  </button>
+</div>
+`;
