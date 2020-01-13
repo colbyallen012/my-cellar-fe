@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { postWine } from './ApiCalls';
+import { postWine } from '../ApiCalls/ApiCalls';
 import './WineForm.css';
 
 export class WineForm extends Component {

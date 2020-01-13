@@ -1,5 +1,5 @@
 import React from 'react';
-import Vino from './Vino'
+import Vino from '../Vino/Vino'
 import './Wines.css'
 
 const Wines = ({wines, removeVino}) => {

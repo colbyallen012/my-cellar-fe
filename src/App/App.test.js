@@ -1,8 +1,8 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import App from './App';
-import { fetchWines, deleteWine } from './ApiCalls'
-import * as constants from './ApiCalls';
+import { fetchWines, deleteWine } from '../ApiCalls/ApiCalls'
+import * as constants from '../ApiCalls/ApiCalls';
 
 
 describe('App', () => {

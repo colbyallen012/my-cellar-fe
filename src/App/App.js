@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import { fetchWines, deleteWine} from './ApiCalls'
-import WineForm from './WineForm.js'
-import Wines from './Wines.js'
+import { fetchWines, deleteWine} from '../ApiCalls/ApiCalls'
+import WineForm from '../WineForm/WineForm.js'
+import Wines from '../Wines/Wines.js'
 import './App.css';
 
 export class App extends Component {
