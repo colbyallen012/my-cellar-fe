@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/my-cellar-fe/static/css/main.d28dd003.chunk.css",
+    "main.js": "/my-cellar-fe/static/js/main.7b61302b.chunk.js",
+    "main.js.map": "/my-cellar-fe/static/js/main.7b61302b.chunk.js.map",
+    "runtime-main.js": "/my-cellar-fe/static/js/runtime-main.c97c3b9f.js",
+    "runtime-main.js.map": "/my-cellar-fe/static/js/runtime-main.c97c3b9f.js.map",
+    "static/js/2.34cb35d8.chunk.js": "/my-cellar-fe/static/js/2.34cb35d8.chunk.js",
+    "static/js/2.34cb35d8.chunk.js.map": "/my-cellar-fe/static/js/2.34cb35d8.chunk.js.map",
+    "index.html": "/my-cellar-fe/index.html",
+    "precache-manifest.70e90836b501e351606f7cf958c0fa2b.js": "/my-cellar-fe/precache-manifest.70e90836b501e351606f7cf958c0fa2b.js",
+    "service-worker.js": "/my-cellar-fe/service-worker.js",
+    "static/css/main.d28dd003.chunk.css.map": "/my-cellar-fe/static/css/main.d28dd003.chunk.css.map",
+    "static/js/2.34cb35d8.chunk.js.LICENSE": "/my-cellar-fe/static/js/2.34cb35d8.chunk.js.LICENSE",
+    "static/media/App.css": "/my-cellar-fe/static/media/background.a151d445.jpeg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c97c3b9f.js",
+    "static/js/2.34cb35d8.chunk.js",
+    "static/css/main.d28dd003.chunk.css",
+    "static/js/main.7b61302b.chunk.js"
+  ]
+}
